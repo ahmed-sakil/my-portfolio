@@ -1,26 +1,204 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f9f9;
-    color: #333;
-}
-nav {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 2rem;
+/* Color Palette & Base Variables */
+:root {
+    --bg-light: #f5f5f5;
+    --bg-dark: #1e1e1e; 
+    --text-main: #2b2b2b;
+    --text-muted: #666666;
+    --white: #ffffff;
+    --shadow-soft: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--bg-dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--bg-dark);
+}
+
+/* Typography & Layout */
+section {
+    padding: 5rem 0;
+}
+
+.section-alt {
+    background-color: #ebebeb;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--bg-dark);
+}
+
+/* Hero Section */
 #hero {
-    background-color: #ecf0f1;
-    padding: 3rem 2rem;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--bg-dark);
+}
+
+.highlight {
+    color: var(--text-muted);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--text-muted);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Cards & Grids */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.skill-card {
+    text-align: center;
+    font-weight: 600;
+    color: var(--bg-dark);
+}
+
+.about-card {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Form */
+.contact-card {
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
 }
 
-#hero button {
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    text-align: center;
+    padding: 2rem 0;
 }

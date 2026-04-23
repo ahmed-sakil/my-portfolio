@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Md. Sakil Ahmed</title>
-    <meta name="description" content="A brief description of your website content.">
+    <title>Sakil Ahmed | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <nav>
+            <div class="logo">SA.</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <h1>My Developer Portfolio</h1>
-    </nav>
     <section id="hero">
-        <h2>Welcome to my creative space.</h2>
-        <button id="hello-btn">Say Hello</button>
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Sakil Ahmed</span></h1>
+            <p>A passionate learner and software developer dedicated to crafting clean, efficient, and user-friendly digital experiences. Welcome to my creative space.</p>
+            <a href="#contact" class="btn" id="hello-btn">Let's Talk</a>
+        </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a student learning Git, HTML, CSS, and JS!</p>
+    <section id="about" class="section-alt">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-card">
+                <p>I am a highly motivated computer science enthusiast with a keen eye for problem-solving. Over the past few years, I have immersed myself in web technologies, version control, and software architecture. When I'm not coding on my Pop!_OS machine, you can find me exploring new Linux distributions, reading tech blogs, or contributing to open-source discussions.</p>
+            </div>
+        </div>
     </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li>Project 1: Git Workflow</li>
-            <li>Project 2: Coming Soon</li>
-        </ul>
+
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="grid-container">
+                <div class="card skill-card">Git & GitHub Workflow</div>
+                <div class="card skill-card">HTML5 Architecture</div>
+                <div class="card skill-card">CSS3 & Responsive Design</div>
+                <div class="card skill-card">JavaScript (ES6+)</div>
+                <div class="card skill-card">Linux / CLI</div>
+                <div class="card skill-card">VS Code Debugging</div>
+            </div>
+        </div>
     </section>
+
+    <section id="projects" class="section-alt">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="grid-container">
+                <div class="card project-card">
+                    <h3>Project Git-Master</h3>
+                    <p>A comprehensive demonstration of advanced Git workflows, including branch management, conflict resolution, and history recovery.</p>
+                </div>
+                <div class="card project-card">
+                    <h3>E-Commerce UI</h3>
+                    <p>A front-end mockup for an online store, featuring a responsive grid layout and interactive cart mechanics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="card contact-card">
+                <p>I am currently open to new opportunities and collaborations.</p>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Sakil Ahmed. Built with precision.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
